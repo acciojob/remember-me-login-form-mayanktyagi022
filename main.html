@@ -1,16 +1,52 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      max-width: 300px;
+      gap: 10px;
+    }
+    #existing {
+      display: none; /* hidden initially */
+      margin-top: 15px;
+      padding: 8px 12px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    #existing:hover {
+      background-color: #0056b3;
+    }
+  </style>
 </head>
-
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
 
+  <h1>Login Form</h1>
+
+  <form id="loginForm">
+    <input type="text" id="username" placeholder="Username" required />
+    <input type="password" id="password" placeholder="Password" required />
+    
+    <label>
+      <input type="checkbox" id="checkbox" /> Remember me.
+    </label>
+    
+    <input type="submit" id="submit" value="Submit" />
+  </form>
+
+  <button id="existing">Login as existing user</button>
+
+  <script src="script.js"></script>
 </body>
-
 </html>
